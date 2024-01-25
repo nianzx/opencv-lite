@@ -27,3 +27,5 @@ struct TMatrix
 	int Reserved;				// Reserved use
 };
 ```
+
+可以参考这个示例 [opencv-lite-example](https://github.com/nianzx/opencv-lite-example)
