@@ -9,5 +9,10 @@
 
 // 添加要在此处预编译的标头
 #include "framework.h"
+#include <memory.h>
+#include <math.h>
+#include <stdlib.h>
+#include <emmintrin.h>
+#include "opencvlite.h"
 
 #endif //PCH_H
