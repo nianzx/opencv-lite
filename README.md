@@ -2,7 +2,7 @@
 所以自己搞了一套
 在dist里提供已经打包好的dll供c#使用
 对外的函数接口原型如下：
-
+```
 // 复制一个mat
 extern "C" bool _declspec(dllexport) _stdcall CloneMatrix(TMatrix * Src, TMatrix * *Dest);
 // 创建一个Mat
@@ -13,9 +13,9 @@ extern "C" bool _declspec(dllexport) _stdcall FreeMatrix(TMatrix * *Matrix);
 extern "C" bool _declspec(dllexport) _stdcall MatchTemplate(TMatrix * Src, TMatrix * Template, TMatrix * *Dest);
 //获取匹配结果（同opencv的MinMaxLoc）
 extern "C" bool _declspec(dllexport) _stdcall MinMaxLoc(TMatrix * Src, int& Min_PosX, int& Min_PosY, int& Max_PosX, int& Max_PosY);
-
+```
 TMatrix定义如下：
-
+```
 struct TMatrix
 {
 	int Width;					// The width of a matrix
@@ -26,3 +26,4 @@ struct TMatrix
 	unsigned char* Data;		// Data of a matrix
 	int Reserved;				// Reserved use
 };
+```
