@@ -45,7 +45,7 @@ extern "C" bool _declspec(dllexport) _stdcall CloneMatrix(TMatrix * Src, TMatrix
 extern "C" bool _declspec(dllexport) _stdcall CreateMatrix(int Width, int Height, int Depth, int Channel, TMatrix * *Matrix);
 // 销毁Mat
 extern "C" bool _declspec(dllexport) _stdcall FreeMatrix(TMatrix * *Matrix);
-// 模版匹配（图片比对）
+// 模版匹配（同opencv的MatchTemplate）
 extern "C" bool _declspec(dllexport) _stdcall MatchTemplate(TMatrix * Src, TMatrix * Template, TMatrix * *Dest);
-//获取匹配结果（返回坐标点）
+//获取匹配结果（同opencv的MinMaxLoc）
 extern "C" bool _declspec(dllexport) _stdcall MinMaxLoc(TMatrix * Src, int& Min_PosX, int& Min_PosY, int& Max_PosX, int& Max_PosY);
